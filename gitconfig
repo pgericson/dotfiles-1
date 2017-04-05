@@ -1,6 +1,6 @@
 [user]
-    name = Jimmy Charnley Kromann
-    email = jimmy@charnley.dk
+    name = Peter Glerup Ericson
+    email = pg.ericson@gmail.com
 
 [color]
     diff = auto
@@ -17,7 +17,6 @@
 [alias]
     # lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
     lg = log --graph --abbrev-commit --decorate --format=format:'%C(blue)%h%C(reset) - %C(green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(yellow)%d%C(reset)' --all
-
 
 [push]
     default = simple

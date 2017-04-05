@@ -58,6 +58,8 @@ Plug 'CSApprox'
 " Plug 'flazz/vim-colorschemes'
 Plug 'nanotech/jellybeans.vim'
 
+" NERDtree
+Plug 'scrooloose/nerdtree.vim'
 
 " L9
 " Dependency for a lot of plugins
@@ -151,8 +153,8 @@ let mapleader=","
 "inoremap <C-tab>   <Esc>:tabnext<CR>i
 "inoremap <C-t>     <Esc>:tabnew<CR>
 " Mapping to alt+arrow instead
-nnoremap <A-left>   :tabprevious<CR>
-nnoremap <A-right>  :tabnext<CR>
+nnoremap <C-h>      :tabprevious<CR>
+nnoremap <C-l>      :tabnext<CR>
 nnoremap <C-t>      :tabnew<CR>
 nnoremap <C-t>      <Esc>:tabnew<enter>:FZF<CR>
 inoremap <A-left>   <Esc>:tabprevious<CR>i
