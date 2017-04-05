@@ -1,18 +1,6 @@
 
 # Set host
-alias sunray='ssh -YC sunray'
-
-# sunray specific commands
-if [ $HOSTNAME = "sunray" ]; then
-    alias sun_idle='sinfo | grep idle'
-    alias sun_busy='sinfo | grep alloc; sinfo | grep mix'
-
-    alias q='squeue -u charnley'
-    alias ql='squeue | grep charnley | wc -l'
-
-    # http://slurm.schedmd.com/squeue.html
-    alias sq='squeue -o "%.10i %.9P %.8u %.10j %.12M %.5D %.4C %R"'
-fi
+alias mediastuff='doctl ssh mediastuff'
 
 # Set standard editor
 export EDITOR=vi
@@ -41,10 +29,12 @@ alias tmg='tmux new -s $(basename $(pwd))'
 # tmux clean. Kill all integer tmux sessions
 alias tmclean='tmux ls -F "#{session_name}" | while read -r line; do if [[ $line =~ ^-?[0-9]+$  ]]; then tmux kill-session -t $line; fi; done'
 
+# ssh agent for session
+alias ssha='ssh-add ~/.ssh/id_rsa'
 
 # Others Shortcuts
 alias ls='ls --color'
-alias l='ls -lh'
+alias l='ls -lha'
 alias cd.='cd ..'
 alias cd..='cd ..'
 alias cd...='cd ../..'
