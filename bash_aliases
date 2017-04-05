@@ -7,6 +7,7 @@ export EDITOR=vi
 
 # Git Shortcuts
 alias amend='git commit --amend'
+alias gad='git add .'
 alias gco='git commit'
 alias gd='git diff'
 alias gdc='git diff --cached'
