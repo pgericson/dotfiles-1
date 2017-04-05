@@ -246,9 +246,9 @@ imap ^[} <ESC>:tabprevious<cr>
 
 " Indentation
 set pastetoggle=<F2> " Press F2 in insert mode for better paste
-set tabstop=4
-set softtabstop=4
-set shiftwidth=4
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 set shiftround
 set expandtab
 autocmd FileType make setlocal noexpandtab " do not change it for makefiles
@@ -339,7 +339,7 @@ if has('cmdline_info')
   set showcmd                 " show partial commands in status line and
 endif
 set laststatus=2  " Always show the statusline
-set cmdheight=2
+set cmdheight=1
 
 
 " ----------------------------------------

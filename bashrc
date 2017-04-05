@@ -1,4 +1,3 @@
-
 # Preserve bash history in multiple terminal windows
 export HISTCONTROL=ignoredups:erasedups:ignorespace  # no duplicate entries
 export HISTSIZE=100000                   # big big history
@@ -32,6 +31,8 @@ fi
 if [ -d "$HOME/bin" ] ; then
     PATH="$HOME/bin:$PATH"
 fi
+
+PATH="$HOME/.linuxbrew/bin:$PATH"
 
 if [ $TERM == "xterm" ]
 then
@@ -142,15 +143,8 @@ Jobs="\j"
 # export PS1="$Blue\h$Color_Off $Cyan\W$Color_Off"
 
 case $HOSTNAME in
-    sunray )
+    mediastuff )
         export PS1="$Red\h$Color_Off $Cyan\W$Color_Off";;
-    london )
-        export PS1="$Black\h$Color_Off $Cyan\W$Color_Off";;
-    macragge )
-        export PS1="$Black\h$Color_Off $Cyan\W$Color_Off";;
-    fend0[1-5].cluster )
-        export PS1="$Yellow\h$Color_Off $Cyan\W$Color_Off"
-        export PS1NOGIT="True";;
     * )
         export PS1="$Blue\h$Color_Off $Cyan\W$Color_Off";;
 esac
@@ -186,11 +180,3 @@ esac
 
 # fuzzy search
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-
-if [ $HOSTNAME = "sunray" ]; then
-    # intel
-    export INTEL_LICENSE_FILE=/home/cstein/intel/licenses/l_B93KN3BR.lic
-    source /home/cstein/intel/bin/compilervars.sh intel64
-fi
-
-

@@ -2,7 +2,7 @@
 all:
 	./vim_update.sh
 
-install: depends fuzzy symlink_clean symlink fuzzy vim_install vim_update tmux_install bin_folder
+install: depends symlink fuzzy vim_install vim_update tmux_install bin_folder
 	bash --login
 
 symlink:
@@ -37,6 +37,8 @@ depends:
 	sudo apt-get install tmux # keep my sessions alive
 	sudo apt-get install curl # vim install
 	sudo apt-get install tree # nice tool for showing tree of dir
+	sudo apt-get install meld # git merge tool
+	sudo apt-get install linuxbrew-wrapper # git merge tool
 
 tmux_install:
 	git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
