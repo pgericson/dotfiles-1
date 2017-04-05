@@ -59,7 +59,7 @@ Plug 'CSApprox'
 Plug 'nanotech/jellybeans.vim'
 
 " NERDtree
-Plug 'scrooloose/nerdtree.vim'
+Plug 'scrooloose/nerdtree'
 
 " L9
 " Dependency for a lot of plugins
