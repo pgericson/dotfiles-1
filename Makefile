@@ -14,6 +14,7 @@ symlink:
 	ln -sf `pwd`/inputrc ~/.inputrc
 	ln -sf `pwd`/tmux.conf ~/.tmux.conf
 	ln -sf `pwd`/ssh_config ~/.ssh/config
+	ln -sf `pwd`/gemrc ~/.gemrc
 
 symlink_clean:
 	rm ~/.vimrc ~/.gitconfig  ~/.bashrc ~/.bash_aliases ~/.bash_profile ~/.inputrc ~/.tmux.conf

@@ -93,15 +93,23 @@ Plug 'tomtom/tcomment_vim'
 " Easymotion
 Plug 'easymotion/vim-easymotion'
 
-" fzf
-Plug 'junegunn/fzf', { 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
+" " fzf
+" Plug 'junegunn/fzf', { 'do': './install --all' }
+" Plug 'junegunn/fzf.vim'
+
+" ctrlp
+Plug 'ctrlpvim/ctrlp.vim'
 
 " Buttomline
-Plug 'itchyny/lightline.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 " Auto pair brackets and others
 Plug 'jiangmiao/auto-pairs'
+
+
+" gitgutter see where the file is changed
+Plug 'airblade/vim-gitgutter'
 
 " Indentation lines
 " usage: <leader>ig
@@ -365,6 +373,13 @@ let g:lightline = {
       \ 'separator': { 'left': '', 'right': '' },
       \ 'subseparator': { 'left': '', 'right': '' }
       \ }
+
+
+" NERDtree
+map <leader>n :NERDTreeToggle<CR>
+
+" vim-airline
+let g:airline_theme='tomorrow'
 
 
 " vim-bookmarks
