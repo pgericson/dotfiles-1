@@ -400,14 +400,6 @@ let g:airline_theme='tomorrow'
 let g:bookmark_sign = '♥'
 
 
-" fzf (fuzzy finder)
-map <leader>f :FZF<CR>
-
-
-" TagBar
-map <leader>l :TagbarToggle<CR>
-
-
 " SuperTab
 let g:SuperTabDefaultCompletionType = "context"
 
@@ -526,24 +518,3 @@ nnoremap <C-S-Left> <Home>
 inoremap <C-S-Left> <Home>
 nnoremap <C-S-Right> <End>
 inoremap <C-S-Right> <End>
-
-
-" ----------------------------------------
-" Sunray Settings
-" ----------------------------------------
-" associate *.src with fortran filetype
-au BufRead,BufNewFile *.src setfiletype fortran
-" au BufRead,BufNewFile *.F90 setfiletype fortran
-
-let fortran_more_precise=1
-
-let s:extfname = expand("%:e")
-if s:extfname ==? "f90"
-    let fortran_free_source=1
-    unlet! fortran_fixed_source
-else
-    let fortran_fixed_source=1
-    unlet! fortran_free_source
-endif
-
-
