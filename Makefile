@@ -1,9 +1,22 @@
+OS := $(shell uname)
 
 all:
 	./vim_update.sh
 
-install: depends symlink fuzzy vim_install vim_update tmux_install bin_folder
-	bash --login
+install:
+ifeq ($(OS),Darwin)
+	# Run MacOS commands
+	$(MAKE) mac_install
+else
+	# check for Linux and run other commands
+	$(MAKE) linux_install
+endif
+
+linux_install: depends symlink fuzzy vim_install vim_update tmux_install bin_folder
+							bash --login
+
+mac_install: symlink vim_install vim_update bin_folder
+						bash --login
 
 symlink:
 	ln -sf `pwd`/vimrc ~/.vimrc
@@ -56,4 +69,3 @@ bin_folder:
 			ln -s `pwd`/$$x ~/$$x;\
 		fi; \
 	done
-

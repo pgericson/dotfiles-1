@@ -144,9 +144,9 @@ Jobs="\j"
 
 case $HOSTNAME in
     mediastuff )
-        export PS1="$Red\h$Color_Off $Cyan\W$Color_Off";;
+        export PS1="$Red\h$Color_Off $Cyan\w$Color_Off";;
     * )
-        export PS1="$Blue\h$Color_Off $Cyan\W$Color_Off";;
+        export PS1="$Green\h$Color_Off $Cyan\w$Color_Off";;
 esac
 
 
@@ -184,3 +184,5 @@ esac
 # rbenv 
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+
+[ -f /usr/local/etc/bash_completion  ] && . /usr/local/etc/bash_completion
