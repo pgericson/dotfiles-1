@@ -12,10 +12,14 @@ alias gco='git commit'
 alias gd='git diff'
 alias gdc='git diff --cached'
 alias gg='git lg'
+alias gch='git checkout'
 
-alias gs='git status -s'
+alias gs='git status'
 alias gph='git push'
 alias gpl='git pull --rebase'
+
+# ruby specific
+alias be='bundle exec'
 
 # fast shortcuts to current work
 alias cwd='cd ~/work/vatum/'
@@ -40,7 +44,7 @@ alias dc='docker-compose'
 alias ssha='ssh-add ~/.ssh/id_rsa'
 
 # Others Shortcuts
-alias ls='ls --color'
+alias ls='ls -color'
 alias l='ls -lha'
 alias cd.='cd ..'
 alias cd..='cd ..'

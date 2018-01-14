@@ -17,8 +17,15 @@
 [alias]
     # lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
     lg = log --graph --abbrev-commit --decorate --format=format:'%C(blue)%h%C(reset) - %C(green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(yellow)%d%C(reset)' --all
+	g = grep --break --heading --line-number
 
 [push]
-    default = simple
+	default = current
+
+[diff]
+	  submodule = log
+
 [merge]
 	tool = meld
+[grep]
+	lineNumber = true

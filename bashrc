@@ -4,6 +4,9 @@ export HISTSIZE=100000                   # big big history
 export HISTFILESIZE=100000               # big big history
 shopt -s histappend                      # append to history, don't overwrite it
 
+# add local bin
+export PATH="/usr/local/bin:$PATH"
+
 # Save and reload the history after each command finishes
 export PROMPT_COMMAND="history -a; history -c; history -r; $PROMPT_COMMAND"
 
@@ -144,9 +147,9 @@ Jobs="\j"
 
 case $HOSTNAME in
     mediastuff )
-        export PS1="$Red\h$Color_Off $Cyan\w$Color_Off";;
+        export PS1="$Red\h$Color_Off $Cyan\W$Color_Off";;
     * )
-        export PS1="$Green\h$Color_Off $Cyan\w$Color_Off";;
+        export PS1="$Green\h$Color_Off $Cyan\W$Color_Off";;
 esac
 
 
