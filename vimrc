@@ -377,6 +377,7 @@ let g:lightline = {
 
 " NERDtree
 map <leader>n :NERDTreeToggle<CR>
+let NERDTreeShowHidden=1
 
 " vim-airline
 let g:airline_theme='tomorrow'
@@ -514,7 +515,7 @@ map <Leader>re :call RenameFile()<cr>
 " Shortcuts for Home/end because my home/end is position
 " crap on my thinkpad
 " Ctrl+Shift+Left/Right -> Home/End
-nnoremap <C-S-Left> <Home>
-inoremap <C-S-Left> <Home>
-nnoremap <C-S-Right> <End>
-inoremap <C-S-Right> <End>
+nnoremap <C-Left> <Home>
+inoremap <C-Left> <Home>
+nnoremap <C-Right> <End>
+inoremap <C-Right> <End>
